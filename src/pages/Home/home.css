@@ -1,0 +1,65 @@
+.carousel-container {
+    margin-bottom: 2rem;
+    padding-top: 59px;
+  }
+  
+  .heading {
+    text-align: center;
+    color: #FF7400;
+    margin-bottom: 1rem;
+    margin-top: 2.5rem;
+  }
+  
+  .text {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  .card {
+    border-width: 1px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: var(--chakra-shadows-lg);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .card-image-md {
+    height: 300px;
+  }
+  
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .card-title {
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-text {
+    text-align: justify;
+  }
+  
+  .button {
+    color-scheme: orange;
+    variant: solid;
+  }
+  
+  .button:hover {
+    background-color: #00008B;
+  }
+  
+  @media (min-width: 48em) {
+    .text {
+      font-size: 1.125rem;
+    }
+  }

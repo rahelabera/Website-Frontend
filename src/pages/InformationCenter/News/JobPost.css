@@ -1,0 +1,59 @@
+.background {
+  background-image: url("https://via.placeholder.com/1200x400");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px 10px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.heading {
+  color: #FF7400;
+}
+
+.subheading {
+  color: #FF7400;
+}
+
+.job-card {
+  border-width: 1px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  padding: 16px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.job-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.close-button {
+  color: #FF7400;
+}
+
+.close-button:hover {
+  background-color: transparent;
+  color: #FF7400;
+}
+
+.close-button:focus {
+  box-shadow: none;
+}

@@ -1,0 +1,84 @@
+.announcementContainer {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 5rem auto;
+  }
+  
+  .announcementHeading {
+    font-size: 2rem;
+    color: #FF7400;
+    margin-bottom: 1rem;
+  }
+  
+  .announcementSubheading {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .announcementGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: 48em) { /* 48em = 768px, md breakpoint */
+    .announcementGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .announcementCard {
+    border: 1px solid;
+    border-radius: 0.375rem; /* md */
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .announcementCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .announcementImage {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  .announcementContent {
+    padding: 1rem;
+  }
+  
+  .announcementDate {
+    font-size: 0.875rem;
+    color: gray;
+    margin-bottom: 0.25rem;
+  }
+  
+  .announcementTitle {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .announcementDescription {
+    font-size: 0.875rem;
+  }
+  
+  .loadMoreButton {
+    background-color: #FF7400;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem; /* md */
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .loadMoreButton:hover {
+    background-color: #00008B;
+  }
+  

@@ -1,0 +1,88 @@
+/* Reset and global settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+/* Keyframes for sliding animation */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Logo slider container */
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: white;
+  position: relative;
+  max-width: 100%; /* Keep slider width to 100% */
+  margin: 0 auto; /* Center the slider */
+}
+
+/* Sliding container */
+.logos-slide {
+  display: flex;
+  animation: slide 60s linear infinite; /* Sliding effect */
+  width: calc(200%); /* Double width to allow continuous sliding */
+}
+
+/* Logo images */
+.logos-slide img {
+  width: 150px; /* Set a fixed width for all images */
+  height: 100px; /* Set a fixed height for all images */
+  margin: 0 20px; /* Spacing between images */
+  object-fit: contain; /* Maintain aspect ratio */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .logos-slide img {
+    width: 120px; /* Adjust width for smaller screens */
+    height: 80px; /* Adjust height for smaller screens */
+    margin: 0 10px; /* Reduce margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .logos-slide img {
+    width: 100px; /* Further adjust for very small screens */
+    height: 70px; /* Adjust height accordingly */
+    margin: 0 5px; /* Smaller margin */
+  }
+}
+
+/* Fade effect on the edges */
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+/* Pause animation on hover */
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}

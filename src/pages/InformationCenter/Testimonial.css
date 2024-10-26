@@ -1,0 +1,45 @@
+.container {
+    margin-top: 75px;
+  }
+  
+  .heading {
+    color: #FF7400;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .testimonial-box {
+    padding: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: white;
+    width: 100%;
+  }
+  
+  .quote {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+  
+  .name-role {
+    font-weight: bold;
+    color: #FF7400;
+  }
+  
+  .image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: 16px;
+  }
+  
+  .button-container {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  
+  .button-heading {
+    margin-bottom: 16px;
+  }
+  

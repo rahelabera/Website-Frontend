@@ -2,41 +2,41 @@ import "./App.css";
 import { GridItem, Grid, Box } from "@chakra-ui/react";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-// import About from "./pages/About/About";
-// import Contact from "./pages/Contact/Contact";
-// import Home from "./pages/Home/Home";
-// import Membership from "./pages/membership/Membership";
-// import Services from "./pages/services/Services";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
+import Home from "./pages/Home/Home";
+import Membership from "./pages/membership/Membership";
+import Services from "./pages/services/Services";
 import { Route, Routes, } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./components/translations/i18n";
-// import CustomerReview from "./pages/About/CustomerReview";
-// import FinanceDepartment from "./pages/About/departments/FinanceDepartment";
-// import HRDepartment from "./pages/About/departments/HRDepartment";
-// import ICTDepartment from "./pages/About/departments/ICTDepartment";
-// import LoanProcessAndEvaluationDepartment from "./pages/About/departments/LoanProcessAndEvaluationDepartment"
-// import LoanCollectionDepartment from "./pages/About/departments/LoanCollectionDepartment"
-// import MarketingDepartment from "./pages/About/departments/MarketingDepartment";
-// import AuditDepartment from "./pages/About/departments/AuditDepartment";
-// import ProjectManagementDepartment from "./pages/About/departments/ProjectManagement";
-// import Gallery from "./pages/About/Gallery";
-// import LeadershipTeam from "./pages/About/LeadershipTeam";
-// import MissionAndVision from "./pages/About/MissionAndVision";
-// import LoanProducts from "./pages/services/LoanProducts";
-// import SavingProducts from "./pages/services/SavingProducts";
-// import PageWithTitle from "./components/PageWithTitle";
-// import AwardAndCertificate from './pages/About/AwardAndCertificate';
+import CustomerReview from "./pages/About/CustomerReview";
+import FinanceDepartment from "./pages/About/departments/FinanceDepartment";
+import HRDepartment from "./pages/About/departments/HRDepartment";
+import ICTDepartment from "./pages/About/departments/ICTDepartment";
+import LoanProcessAndEvaluationDepartment from "./pages/About/departments/LoanProcessAndEvaluationDepartment"
+import LoanCollectionDepartment from "./pages/About/departments/LoanCollectionDepartment"
+import MarketingDepartment from "./pages/About/departments/MarketingDepartment";
+import AuditDepartment from "./pages/About/departments/AuditDepartment";
+import ProjectManagementDepartment from "./pages/About/departments/ProjectManagement";
+import Gallery from "./pages/About/Gallery";
+import LeadershipTeam from "./pages/About/LeadershipTeam";
+import MissionAndVision from "./pages/About/MissionAndVision";
+import LoanProducts from "./pages/services/LoanProducts";
+import SavingProducts from "./pages/services/SavingProducts";
+import PageWithTitle from "./components/PageWithTitle";
+import AwardAndCertificate from './pages/About/AwardAndCertificate';
 import './i18n';
 import IconsList from "./components/footer/IconsList";
 import ScrollToTop from "./components/ScrollTop";
-// import FAQ from "./pages/InformationCenter/FAQ";
-// import Testimonial from "./pages/InformationCenter/Testimonial";
-// import Announcement from "./pages/InformationCenter/News/Announcement";
-// import Events from "./pages/InformationCenter/News/Events";
-// import JobPost from "./pages/InformationCenter/News/JobPost";
-// import TrainingAndConsultancy from "./pages/services/TrainingAndConsultancy";
-// import SmallLifeInsurance from "./pages/services/SmallLifeInsurance";
+import FAQ from "./pages/InformationCenter/FAQ";
+import Testimonial from "./pages/InformationCenter/Testimonial";
+import Announcement from "./pages/InformationCenter/News/Announcement";
+import Events from "./pages/InformationCenter/News/Events";
+import JobPost from "./pages/InformationCenter/News/JobPost";
+import TrainingAndConsultancy from "./pages/services/TrainingAndConsultancy";
+import SmallLifeInsurance from "./pages/services/SmallLifeInsurance";
 
 function App() {
   return (
@@ -62,7 +62,7 @@ function App() {
 
       <GridItem area="main">
         <Routes>
-          {/* <Route path="/" element={<PageWithTitle title="Home - Amigos Website"><Home /></PageWithTitle>} />
+          <Route path="/" element={<PageWithTitle title="Home - Amigos Website"><Home /></PageWithTitle>} />
           <Route path="/about-us" element={<PageWithTitle title="About Us - Amigos Website"><About /></PageWithTitle>} />
           <Route path="/about-us/customer-review" element={<PageWithTitle title="Customer Review - Amigos Website"><CustomerReview /></PageWithTitle>} />
           <Route path="/about-us/mission-and-vision" element={<PageWithTitle title="Mission and Vision - Amigos Website"><MissionAndVision /></PageWithTitle>} />
@@ -88,7 +88,7 @@ function App() {
           <Route path="/information-center/news/announcement" element={<PageWithTitle title="Announcement - Amigos Website"><Announcement/></PageWithTitle>} />
           <Route path="/information-center/news/job-post" element={<PageWithTitle title="Job Post - Amigos Website"><JobPost/></PageWithTitle>} />
           <Route path="/information-center/news/events" element={<PageWithTitle title="Events - Amigos Website"><Events/></PageWithTitle>} />
-          <Route path="/information-center/testimonials" element={<PageWithTitle title="Testimonials - Amigos Website"><Testimonial/></PageWithTitle>} /> */}
+          <Route path="/information-center/testimonials" element={<PageWithTitle title="Testimonials - Amigos Website"><Testimonial/></PageWithTitle>} />
         </Routes>
       </GridItem>
 

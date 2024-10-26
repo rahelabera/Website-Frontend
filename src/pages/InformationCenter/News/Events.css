@@ -1,0 +1,38 @@
+.banner {
+    background-image: url("https://via.placeholder.com/1200x400");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 10px;
+    color: white;
+    text-align: center;
+    position: relative;
+    
+  }
+  
+  .banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.6;
+    z-index: -1;
+  }
+  
+  .event-card {
+    border-width: 1px;
+    border-radius: 8px;
+    background-color: white;
+    padding: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .event-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }

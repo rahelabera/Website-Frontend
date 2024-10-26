@@ -1,0 +1,44 @@
+.faq-container {
+  padding: 16px;
+  margin-top: 59px;
+  margin-left: 20px;
+  margin-right: 30px;
+}
+
+.faq-heading {
+  font-size: 1.125rem;
+  margin-bottom: 16px;
+  color: #FF7400;
+}
+
+.accordion-button {
+  background-color: white;
+  border-radius: 15px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  color: #FF7400;
+}
+
+.accordion-button:hover {
+  background-color: #FF7400 !important;
+  color: white;
+}
+
+.accordion-button[aria-expanded="true"] {
+  background-color: #FF7400;
+  color: white;
+}
+
+.accordion-panel {
+  padding-bottom: 16px;
+}
+
+.error-message {
+  padding: 16px;
+  color: red;
+}
+
+.loading-message {
+  font-size: 1.125rem;
+}
