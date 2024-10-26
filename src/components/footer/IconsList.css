@@ -1,0 +1,40 @@
+.icons-box {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px;
+    z-index: 1000;
+  }
+  
+  .icon-link {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .icon-link:hover {
+    transform: scale(1.2);
+  }
+  
+  .icon-link:nth-child(1) {
+    color: #0088cc;
+  }
+  
+  .icon-link:nth-child(2) {
+    color: #3b5998;
+  }
+  
+  .icon-link:nth-child(3) {
+    color: #e4405f;
+  }
+  
+  .icon-link:nth-child(4) {
+    color: #0077b5;
+  }
+  
+  .icon-link:nth-child(5) {
+    color: #010101;
+  }
+  
+  .icon-link:nth-child(6) {
+    color: #ff0000;
+  }
