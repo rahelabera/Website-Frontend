@@ -14,13 +14,6 @@ import {
   Td,
 } from "@chakra-ui/react";
 
-interface Event {
-  date: string;
-  name: string;
-  forContent: boolean;
-  forEvent: boolean;
-}
-
 const events = {
   September: [
     {

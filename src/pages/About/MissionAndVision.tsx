@@ -1,9 +1,12 @@
-import { Box, Heading, Text, SimpleGrid } from "@chakra-ui/react";
+import { Box, Heading, Text, SimpleGrid, BoxProps } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { forwardRef } from "react";
 import { useTranslation } from "react-i18next";
 
 // Motion component for Box with hover animation
-const MotionBox = motion(Box);
+const MotionBox = motion(forwardRef<HTMLDivElement, BoxProps>((props, ref) => (
+  <Box ref={ref} {...props} />
+)));
 
 const VisionMissionValues = () => {
   const { t } = useTranslation();

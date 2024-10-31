@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, forwardRef } from "react";
 import { Box, Heading, Text, Image, Flex, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import axios from "axios";
@@ -6,10 +6,15 @@ import departmentHeadImage from "../../../assets/finance.png";
 import { useTranslation } from "react-i18next";
 
 // Create a motion component for the Image
-const MotionImage = motion(Image);
+const MotionImage = motion(
+  forwardRef<HTMLImageElement, React.ComponentProps<typeof Image>>(
+    (props, ref) => <Image ref={ref} {...props} />
+  )
+);
 
 const FinanceDepartment = () => {
   const { i18n } = useTranslation();
+  
   // State for storing department data
   const [departmentData, setDepartmentData] = useState({
     name_am: "",
@@ -28,8 +33,8 @@ const FinanceDepartment = () => {
     const fetchDepartmentData = async () => {
       try {
         const response = await axios.get(
-          "http://192.168.1.44:8000/api/departments/6"
-          // "http://192.168.137.226:8000/api/departments/6"
+          "http://192.168.1.44:8000/api/departments/5"
+          // "http://192.168.137.226:8000/api/departments/5"
         );
         setDepartmentData(response.data);
       } catch (error) {

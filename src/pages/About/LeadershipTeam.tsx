@@ -1,10 +1,33 @@
-import React, { useEffect, useState } from "react";
-import { Box, Heading, Image, Text, SimpleGrid, Spinner, Alert, AlertIcon } from "@chakra-ui/react";
+import React, { useEffect, useState, forwardRef } from "react";
+import {
+  Box,
+  Heading,
+  Image,
+  Text,
+  SimpleGrid,
+  Spinner,
+  Alert,
+  AlertIcon,
+  BoxProps,
+  ImageProps,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
 
-const MotionBox = motion(Box);
+// Create a motion component for Box with correct typing
+const MotionBox = motion(
+  forwardRef<HTMLDivElement, BoxProps>((props, ref) => (
+    <Box ref={ref} {...props} />
+  ))
+);
+
+// Create a motion component for Image with correct typing
+const MotionImage = motion(
+  forwardRef<HTMLImageElement, ImageProps>((props, ref) => (
+    <Image ref={ref} {...props} />
+  ))
+);
 
 interface Member {
   name_en: string;
@@ -38,9 +61,9 @@ const renderPersonBox = ({
     borderColor="#FF7400"
     whileHover={{ scale: 1.05 }}
     textAlign="center"
-    key={name} // Ensure 'name' is unique or consider using a unique identifier
+    key={name}
   >
-    <Image
+    <MotionImage
       borderRadius="full"
       boxSize="150px"
       src={imageSrc}
@@ -51,6 +74,7 @@ const renderPersonBox = ({
     <Text>{title}</Text>
   </MotionBox>
 );
+
 const LeadershipTeam: React.FC = () => {
   const { i18n } = useTranslation();
   const [committees, setCommittees] = useState<Committee[]>([]);
@@ -61,7 +85,6 @@ const LeadershipTeam: React.FC = () => {
     const fetchCommittees = async () => {
       try {
         const response = await axios.get<Committee[]>("http://192.168.1.44:8000/api/committees/");
-        // const response = await axios.get<Committee[]>("http://192.168.137.226:8000/api/committees/");
         setCommittees(response.data);
       } catch (error: any) {
         console.error("There was an error fetching the data!", error);
